@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Fundamentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* For the dropdown to show on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Basic Electrical</div>
+            <ul class="flex space-x-6">
+                <!-- Home -->
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+
+                <!-- Topics Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-yellow-300">Topics</a>
+                    <ul class="dropdown-menu absolute hidden bg-blue-600 text-white mt-2 rounded shadow-lg w-48">
+                        <li><a href="basic-electricity.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electricity</a></li>
+                        <li><a href="ohms-law.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Ohm's Law</a></li>
+                        <li><a href="kvl-kcl.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">KVL & KCL Theorems</a></li>
+                        <li><a href="ac-fundamentals.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">AC Fundamentals</a></li>
+                    </ul>
+                </li>
+
+                <!-- About -->
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+
+                <!-- Downloads -->
+                <li><a href="downloads.html" class="hover:text-yellow-300">Downloads</a></li>
+
+                <!-- Contact -->
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">AC Fundamentals</h1>
+            <p class="mt-4 text-lg">Learn the essential AC circuit concepts, including RMS, Average Value, Power Factor, Series and Parallel Circuits, and Resonance.</p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+
+            <!-- AC Current RMS -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">AC Current RMS (Root Mean Square)</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    The RMS value of an alternating current (AC) is the square root of the average of the squares of all instantaneous values over one complete cycle. It is equivalent to the DC current that delivers the same power to a load.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Irms = √(I₁² + I₂² + ... + In²) / n</strong></li>
+                    <li>Where <strong>n</strong> is the number of samples or instants.</li>
+                </ul>
+            </div>
+
+            <!-- Average Value -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Average Value</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    The average value of an AC signal is the mean of all instantaneous values in one complete cycle.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Iavg = (1/T) ∫ I(t) dt</strong> (from 0 to T)</li>
+                </ul>
+            </div>
+
+            <!-- Peak Value -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Peak Value</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    The peak value of an AC signal is the maximum instantaneous value in one complete cycle.
+                </p>
+            </div>
+
+            <!-- Form Factor -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Form Factor</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    The form factor is the ratio of the RMS value to the average value of the current or voltage.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Form Factor = Irms / Iavg</strong></li>
+                </ul>
+            </div>
+
+            <!-- Power -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Power</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    In an AC circuit, the power is the rate at which energy is delivered to a load. It can be calculated using the voltage, current, and power factor.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>P = Vrms × Irms × cos(ϕ)</strong></li>
+                </ul>
+            </div>
+
+            <!-- Power Factor -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Power Factor</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Power factor is the ratio of real power to apparent power in an AC circuit. It shows how effectively the current is being converted into useful work.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Power Factor = cos(ϕ)</strong></li>
+                    <li>Where <strong>ϕ</strong> is the phase difference between voltage and current.</li>
+                </ul>
+            </div>
+
+            <!-- Series RL Circuit -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Series RL Circuit</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    A series RL circuit is one where a resistor (R) and inductor (L) are connected in series to an AC supply. The impedance of the circuit is a combination of resistance and inductive reactance.
+                </p>
+            </div>
+
+            <!-- Series RC Circuit -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Series RC Circuit</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    A series RC circuit consists of a resistor and a capacitor in series with the AC source. The impedance is a combination of the resistance and capacitive reactance.
+                </p>
+            </div>
+
+            <!-- Parallel RL Circuit -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Parallel RL Circuit</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    In a parallel RL circuit, a resistor and an inductor are connected in parallel to an AC source. The total impedance is calculated using the reciprocal of the individual impedances.
+                </p>
+            </div>
+
+            <!-- Parallel RC Circuit -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Parallel RC Circuit</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    A parallel RC circuit consists of a resistor and a capacitor in parallel with an AC source. The total impedance is the reciprocal of the sum of the reciprocals of the individual impedances.
+                </p>
+            </div>
+
+            <!-- Parallel RLC Circuit -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Parallel RLC Circuit</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    A parallel RLC circuit consists of a resistor (R), an inductor (L), and a capacitor (C) connected in parallel. The impedance of the parallel RLC circuit is the reciprocal of the sum of the reciprocals of the individual impedances.
+                </p>
+            </div>
+
+            <!-- Series Resonance -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Series Resonance</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Series resonance occurs when the impedance of a series RLC circuit is minimized. This happens at a specific resonant frequency where the inductive reactance and capacitive reactance are equal in magnitude but opposite in phase.
+                </p>
+            </div>
+
+            <!-- Parallel Resonance -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Parallel Resonance</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Parallel resonance occurs when the impedance of a parallel RLC circuit is maximized. This occurs at the resonant frequency where the total current is minimized.
+                </p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-12 text-center">
+                <a href="javascript:history.back()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    Go Back to Home Page
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC JE Blog</title>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+ <script src="app.js" defer></script> <!-- Link to the compiled JavaScript file -->
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+ </head>
+ 
+    <style>
+        /* Custom Font Styling */
+body {
+     font-family: 'Inter', sans-serif;
+ }
+
+        /* Hover Effects for Dropdown */
+.dropdown:hover .dropdown-menu {
+      display: block;
+ }
+ #heroSection{
+  background:url(banner2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+}
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+ <nav class="bg-blue-700 text-white">
+  <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+  <div class="text-2xl font-bold">
+   SSC JE Prep</div>
+
+            <!-- Menu Items -->
+   <ul class="hidden md:flex space-x-6 items-center">
+    <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+    <li><a href="aboutus.html" class="hover:text-yellow-300">About</a></li>
+
+<li class="relative group">
+    <!-- Dropdown Trigger -->
+    <a href="#" class="hover:text-yellow-300">Subjects</a>
+    <!-- Dropdown Menu -->
+    <ul class="dropdown-menu absolute hidden group-hover:block bg-blue-600 text-white rounded-lg mt-2 w-48 z-50 shadow-lg">
+        <li><a href="basic-electrical.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electrical</a></li>
+        <li><a href="power-system.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Power System</a></li>
+        <li><a href="basic-electronics.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electronics</a></li>
+        <li><a href="measurement.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Measurement</a></li>
+        <li><a href="electrical-machine.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Electrical Machine</a></li>
+    </ul>
+</li>
+     <li><a href="downloaded.html" class="hover:text-yellow-300">Downloads</a></li>
+     <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+     <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+     </ul>
+
+
+
+            <!-- Hamburger Menu for Mobile -->
+ <button id="hamburger" class="md:hidden flex flex-col space-y-1">
+  <span class="w-6 h-1 bg-white"></span>
+  <span class="w-6 h-1 bg-white"></span>
+  <span class="w-6 h-1 bg-white"></span>
+ </button>
+ </div>
+
+        <!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+ <ul class="space-y-4 p-4">
+  <li><a href="#" class="block text-white hover:text-yellow-300">Home</a></li>
+  <li><a href="#" class="block text-white hover:text-yellow-300">About</a></li>
+  <li class="relative">
+  <button class="block w-full text-left text-white hover:text-yellow-300 focus:outline-none" onclick="toggleDropdown()">Subjects</button>
+  <ul id="mobileDropdown" class="hidden bg-blue-600 rounded-lg">
+   <li><a href="#" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electrical</a></li>
+   <li><a href="#" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Power System</a></li>
+   <li><a href="#" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electronics</a></li>
+   <li><a href="#" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Measurement</a></li>
+   <li><a href="#" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Electrical Machine</a></li>
+ </ul>
+   </li>
+   <li><a href="#" class="block text-white hover:text-yellow-300">Downloads</a></li>
+   <li><a href="#" class="block text-white hover:text-yellow-300">Contact</a></li>
+
+     <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+    </ul>
+    </div>
+    </nav>
+
+ <!-- Hero Section -->
+ <section id="heroSection" class="relative bg-blue-600 text-white py-20">
+  <div class="container mx-auto text-center">
+   <h1 class="text-4xl font-bold">Welcome to SSC JE Prep</h1>
+   <p class="mt-4 text-lg">Your ultimate destination for SSC JE Electrical Engineering preparation.</p>
+   <a href="#subjects" class="mt-6 inline-block px-8 py-3 bg-yellow-300 text-blue-800 font-semibold rounded hover:bg-yellow-400">
+    Explore Subjects
+   </a>
+   <!-- Content will be dynamically injected here -->
+ </section>
+
+ <!-- About Section -->
+ <section class="py-12">
+  <div class="container mx-auto text-center">
+   <h2 class="text-3xl font-bold text-gray-800">Why Choose Us?</h2>
+   <p class="mt-4 text-lg text-gray-700">
+    We provide focused, exam-oriented study materials, notes, and practice questions tailored for SSC JE aspirants. Our platform covers all key subjects, with easy-to-understand content and downloadable resources.
+   </p>
+  </div>
+ </section>
+
+ <!-- Subjects Section -->
+ <section id="subjects" class="py-12 bg-gray-200">
+  <div class="container mx-auto">
+   <h2 class="text-3xl font-bold text-gray-800 text-center">Our Subjects</h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+    <!-- Subject Card -->
+    
+    
+ 
+
+    
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">Basic Electrical</h3>
+     <p class="text-gray-700 mt-2">Learn fundamental electrical concepts and principles essential for SSC JE.</p>
+     <a href="basic-electrical.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+    
+    
+    
+    
+    
+    <!-- Subject Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">Power System</h3>
+     <p class="text-gray-700 mt-2">Explore power generation, transmission, and distribution systems.</p>
+     <a href="power-system.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+    <!-- Subject Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">Basic Electronics</h3>
+     <p class="text-gray-700 mt-2">Understand semiconductors, diodes, transistors, and basic circuits.</p>
+     <a href="basic-electronics.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+    <!-- Subject Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">Measurement</h3>
+     <p class="text-gray-700 mt-2">Master the techniques and instruments for accurate measurements.</p>
+     <a href="measurement.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+    <!-- Subject Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">Electrical Machine</h3>
+     <p class="text-gray-700 mt-2">Delve into transformers, motors, and generators for SSC JE.</p>
+     <a href="electrical-machine.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+    <!-- Subject Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+     <h3 class="text-2xl font-semibold text-gray-800">General Science</h3>
+     <p class="text-gray-700 mt-2">Master the techniques and instruments for accurate measurements.</p>
+     <a href="measurement.html" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+      Learn More
+     </a>
+    </div>
+   </div>
+  </div>
+ </section>
+<!------Aboutnssection------>
+
+<section class="py-12 bg-blue-700 text-white text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold">Ready to Ace SSC JE?</h2>
+        <p class="mt-4 text-lg">Start your preparation today with our detailed notes, resources, and expert guidance.</p>
+        <a href="#contact.html" class="mt-6 inline-block px-8 py-3 bg-yellow-300 text-blue-800 font-semibold rounded hover:bg-yellow-400">
+            Contact Us
+        </a>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+ <!-- Footer -->
+ <footer class="bg-blue-700 text-white text-center py-4">
+  <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+ </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts for Mobile Dropdown -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileDropdown = document.getElementById('mobileDropdown');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleDropdown() {
+            mobileDropdown.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>

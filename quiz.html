@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Selection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Basic Electrical</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="quiz-landing.html" class="hover:text-yellow-300">Quizzes</a></li>
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+                <li><a href="downloads.html" class="hover:text-yellow-300">Downloads</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Electrical Quizzes</h1>
+            <p class="mt-4 text-lg">Choose your subject and start the quiz!</p>
+        </div>
+    </header>
+
+    <!-- Quiz Grid Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Basic Electricity Quiz -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold text-gray-800">Basic Electricity Quiz</h3>
+                <p class="mt-4 text-gray-700">Test your knowledge of basic electrical concepts like Ohm's law, current, voltage, and more.</p>
+                <div class="mt-6 text-center">
+                    <a href="basic-electricity-quiz.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">Start Quiz</a>
+                </div>
+            </div>
+
+            <!-- Ohm's Law Quiz -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold text-gray-800">Ohm's Law Quiz</h3>
+                <p class="mt-4 text-gray-700">Test your understanding of Ohm's Law and its applications in electrical circuits.</p>
+                <div class="mt-6 text-center">
+                    <a href="ohms-law-quiz.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">Start Quiz</a>
+                </div>
+            </div>
+
+            <!-- KVL & KCL Theorems Quiz -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold text-gray-800">KVL & KCL Theorems Quiz</h3>
+                <p class="mt-4 text-gray-700">Check your understanding of Kirchhoff’s Voltage Law (KVL) and Current Law (KCL).</p>
+                <div class="mt-6 text-center">
+                    <a href="kvl-kcl-quiz.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">Start Quiz</a>
+                </div>
+            </div>
+
+            <!-- AC Fundamentals Quiz -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold text-gray-800">AC Fundamentals Quiz</h3>
+                <p class="mt-4 text-gray-700">Evaluate your knowledge on AC circuits, including RMS, peak values, and resonance.</p>
+                <div class="mt-6 text-center">
+                    <a href="ac-fundamentals-quiz.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">Start Quiz</a>
+                </div>
+            </div>
+
+            <!-- Series & Parallel Circuit Quiz -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold text-gray-800">Series & Parallel Circuit Quiz</h3>
+                <p class="mt-4 text-gray-700">Test your skills in analyzing series and parallel circuits and their behaviors.</p>
+                <div class="mt-6 text-center">
+                    <a href="series-parallel-circuit-quiz.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">Start Quiz</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="mb-8 text-center">
+        <a href="javascript:history.back()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+            Go Back to Previous Page
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

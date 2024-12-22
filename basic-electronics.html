@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Electronics - SSC JE Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown Styling */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-2xl font-bold">Basic Electronics</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="aboutus.html" class="hover:text-yellow-300">About</a></li>
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-yellow-300">Topics</a>
+                    <ul class="dropdown-menu absolute hidden bg-blue-600 text-white mt-2 rounded shadow-lg w-48">
+                        <li><a href="#diodes" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Diodes</a></li>
+                        <li><a href="#transistors" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Transistors</a></li>
+                        <li><a href="#amplifiers" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Amplifiers</a></li>
+                        <li><a href="#oscillators" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Oscillators</a></li>
+                        <li><a href="#digital-electronics" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Digital Electronics</a></li>
+                        <li><a href="#communication-systems" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Communication Systems</a></li>
+                    </ul>
+                </li>
+                <li><a href="downloaded.html" class="hover:text-yellow-300">Downloads</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Basic Electronics</h1>
+            <p class="mt-4 text-lg">Master the fundamentals of electronics with topics tailored for SSC JE Exam preparation.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Key Topics in Basic Electronics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Diodes -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Diodes</h3>
+                    <p class="mt-2 text-gray-700">Understand the working and applications of PN junction diodes, Zener diodes, and LEDs.</p>
+                    <a href="#diodes" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+
+                <!-- Transistors -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Transistors</h3>
+                    <p class="mt-2 text-gray-700">Learn about Bipolar Junction Transistors (BJTs) and Field Effect Transistors (FETs).</p>
+                    <a href="#transistors" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+
+                <!-- Amplifiers -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Amplifiers</h3>
+                    <p class="mt-2 text-gray-700">Study the types and configurations of amplifiers used in electronic circuits.</p>
+                    <a href="#amplifiers" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+
+                <!-- Oscillators -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Oscillators</h3>
+                    <p class="mt-2 text-gray-700">Explore the working principles and types of oscillators like RC and LC oscillators.</p>
+                    <a href="#oscillators" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+
+                <!-- Digital Electronics -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Digital Electronics</h3>
+                    <p class="mt-2 text-gray-700">Understand logic gates, flip-flops, counters, and basic digital circuits.</p>
+                    <a href="#digital-electronics" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+
+                <!-- Communication Systems -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Communication Systems</h3>
+                    <p class="mt-2 text-gray-700">Learn about modulation techniques, transmission lines, and signal processing.</p>
+                    <a href="#communication-systems" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Sections -->
+
+    <section id="diodes" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Diodes</h2>
+            <p class="mt-4 text-gray-700">
+                Diodes are semiconductor devices that allow current to flow in one direction only. Key topics include:
+                <ul class="list-disc list-inside mt-4">
+                    <li>PN Junction Diodes</li>
+                    <li>Zener Diodes (for voltage regulation)</li>
+                    <li>LEDs (Light Emitting Diodes)</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+
+    <!-- Back to Home Button -->
+    <section class="py-12 text-center">
+        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
+            Back to Home
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-4 text-center">
+        <p>&copy; 2024 SSC JE Prep. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

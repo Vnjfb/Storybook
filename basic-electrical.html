@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Electrical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+  /* For the dropdown to show on hover */
+  .dropdown:hover .dropdown-menu {
+   display: block;
+  }
+ 
+  .dropdown-menu {
+   display: none;
+  }
+  
+#btn{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Basic Electrical</div>
+            <ul class="flex space-x-6">
+                <!-- Home -->
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+
+                <!-- Topics Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-yellow-300">Topics</a>
+                    <ul class="dropdown-menu absolute hidden bg-blue-600 text-white mt-2 rounded shadow-lg w-48">
+                        <li><a href="basic electricity.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electricity</a></li>
+                        <li><a href="ohms-law.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Ohm's Law</a></li>
+                        <li><a href="kvl-kcl.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">KVL & KCL Theorems</a></li>
+                        <li><a href="ac-fundamentals.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">AC Fundamentals</a></li>
+                        <!-- Leave space for additional topics -->
+                    </ul>
+                </li>
+
+                <!-- About -->
+                <li><a href="aboutus.html" class="hover:text-yellow-300">About</a></li>
+
+                <!-- Downloads -->
+                <li><a href="downloaded.html" class="hover:text-yellow-300">Downloads</a></li>
+
+                <!-- Contact -->
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold text-gray-800">Basic Electrical Concepts</h1>
+        <p class="mt-4 text-lg text-gray-700">
+            Welcome to the Basic Electrical section. Here, you will learn about fundamental concepts in electrical engineering, including Ohm's Law, Kirchhoff's laws, series and parallel circuits, and more.
+        </p>
+        <p class="mt-4 text-lg text-gray-700">
+            This page is designed to help you master the foundational principles required for the SSC JE exam and other competitive exams.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-800 mt-8">Topics Covered:</h2>
+        <ul class="mt-4 list-disc pl-5 text-lg text-gray-700">
+            <li>Ohm's Law and its Applications</li>
+            <li>Kirchhoff's Current and Voltage Laws</li>
+            <li>Series and Parallel Circuits</li>
+            <li>Power and Energy in Electrical Circuits</li>
+            <li>AC vs DC Circuits</li>
+        </ul>
+
+    </div>
+  <!-- Content Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+            <!-- Charge -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Charge</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Charge** is a fundamental property of matter that causes it to experience a force in an electric field. It can be **positive** or **negative**.
+                </p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>SI Unit: **Coulomb (C)**</li>
+                    <li>Types: Positive Charge (+) and Negative Charge (-)</li>
+                </ul>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Formula**: Charge (Q) = Current (I) × Time (t)
+                </p>
+            </div>
+
+            <!-- Current -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Current</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Current** is the rate of flow of electric charge through a conductor. It is the movement of electrons.
+                </p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>SI Unit: **Ampere (A)**</li>
+                    <li>Types: Direct Current (DC) and Alternating Current (AC)</li>
+                </ul>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Formula**: Current (I) = Charge (Q) / Time (t)
+                </p>
+            </div>
+
+            <!-- Voltage -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Voltage</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Voltage** is the potential difference between two points in an electric circuit. It drives the current through the circuit.
+                </p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>SI Unit: **Volt (V)**</li>
+                </ul>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Formula**: Voltage (V) = Work Done (W) / Charge (Q)
+                </p>
+            </div>
+
+            <!-- Electric Field -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Electric Field</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                   Electric Field is a region around a charged particle where a force is experienced by another charge.
+                </p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>SI Unit: **Newton per Coulomb (N/C)** or **Volt per Meter (V/m)**</li>
+                </ul>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Formula**: Electric Field (E) = Force (F) / Charge (Q)
+                </p>
+            </div>
+
+            <!-- Power -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Power</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Power** is the rate at which electrical energy is transferred or consumed in a circuit.
+                </p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>SI Unit: **Watt (W)**</li>
+                </ul>
+                <p class="mt-4 text-lg text-gray-700">
+                    **Formula**: Power (P) = Voltage (V) × Current (I)
+                </p>
+                <p class="mt-4 text-lg text-gray-700">
+                    Alternate Formulas:
+                    <ul class="list-disc pl-5">
+                        <li>P = I² × R (using Ohm's Law)</li>
+                        <li>P = V² / R (using Ohm's Law)</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+<div id="btn">
+
+<a href="downloads/basic-electrical-notes.pdf" target="_blank" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+  Download Notes
+ </a>
+ <a href="index.html" class="mt-6 ml-3 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800">
+  Back to Home
+ </a>
+
+</div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4 mt-10">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

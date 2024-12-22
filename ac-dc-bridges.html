@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC & DC Bridges - SSC JE Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-2xl font-bold">AC & DC Bridges</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+                <li><a href="downloads.html" class="hover:text-yellow-300">Downloads</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">AC & DC Bridges</h1>
+            <p class="mt-4 text-lg">Understanding the working principles and applications of various bridges in electrical measurements.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Key Topics in AC & DC Bridges</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Wheatstone Bridge -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Wheatstone Bridge</h3>
+                    <p class="mt-2 text-gray-700">
+                        The Wheatstone Bridge is used to measure an unknown electrical resistance by balancing two legs of a bridge circuit.
+                    </p>
+                    <a href="#wheatstone-bridge" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Maxwell Bridge -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Maxwell Bridge</h3>
+                    <p class="mt-2 text-gray-700">
+                        Maxwell's Bridge is used to measure inductance, especially when the inductance is in the presence of capacitive reactance.
+                    </p>
+                    <a href="#maxwell-bridge" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Hay’s Bridge -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Hay’s Bridge</h3>
+                    <p class="mt-2 text-gray-700">
+                        Hay's Bridge is another method used to measure inductance using a balanced bridge circuit, similar to Maxwell's Bridge.
+                    </p>
+                    <a href="#hays-bridge" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Schering Bridge -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Schering Bridge</h3>
+                    <p class="mt-2 text-gray-700">
+                        Schering Bridge is used for the measurement of capacitance and loss angle in capacitors.
+                    </p>
+                    <a href="#schering-bridge" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Applications -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Applications of Bridges</h3>
+                    <p class="mt-2 text-gray-700">
+                        Bridges are widely used in the calibration of resistors, capacitors, and inductors in labs and for industrial measurements.
+                    </p>
+                    <a href="#applications" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Sections -->
+
+    <section id="wheatstone-bridge" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Wheatstone Bridge</h2>
+            <p class="mt-4 text-gray-700">
+                The Wheatstone Bridge is a simple circuit used for the precise measurement of resistance. The bridge is balanced when the ratio of resistances in one leg is equal to the ratio in the other leg. This allows for the calculation of the unknown resistance.
+            </p>
+            <p class="mt-4"><strong>Formula:</strong> 
+                <code>R_x = (R_2 * R_3) / R_1</code>
+                where <em>R_x</em> is the unknown resistance, and <em>R_1</em>, <em>R_2</em>, and <em>R_3</em> are the known resistances.
+            </p>
+        </div>
+    </section>
+
+    <section id="maxwell-bridge" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Maxwell Bridge</h2>
+            <p class="mt-4 text-gray-700">
+                Maxwell’s Bridge is used for measuring inductance. It is particularly effective in determining the inductance of coils with the presence of capacitive reactance.
+            </p>
+            <p class="mt-4"><strong>Formula:</strong> 
+                <code>L = (R_3 * R_4) / (R_1 * R_2)</code>
+                where <em>L</em> is the unknown inductance, and <em>R_1</em>, <em>R_2</em>, <em>R_3</em>, and <em>R_4</em> are known resistances.
+            </p>
+        </div>
+    </section>
+
+    <section id="hays-bridge" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Hay's Bridge</h2>
+            <p class="mt-4 text-gray-700">
+                Hay's Bridge is similar to Maxwell's Bridge but uses different components for measuring inductance. It is especially useful for measuring high-frequency inductance.
+            </p>
+            <p class="mt-4"><strong>Formula:</strong> 
+                <code>L = (R_3 * R_4) / (R_1 * R_2)</code>
+                where <em>L</em> is the inductance being measured, and <em>R_1</em>, <em>R_2</em>, <em>R_3</em>, and <em>R_4</em> are resistances in the circuit.
+            </p>
+        </div>
+    </section>
+
+    <section id="schering-bridge" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Schering Bridge</h2>
+            <p class="mt-4 text-gray-700">
+                Schering Bridge is used to measure the capacitance and dissipation factor of capacitors. It is widely used in the measurement of dielectric materials.
+            </p>
+            <p class="mt-4"><strong>Formula:</strong> 
+                <code>C_x = (R_2 * C_3) / (R_3 * C_2)</code>
+                where <em>C_x</em> is the unknown capacitance, and <em>R_2</em>, <em>R_3</em>, <em>C_2</em>, and <em>C_3</em> are known values.
+            </p>
+        </div>
+    </section>
+
+    <section id="applications" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Applications of Bridges</h2>
+            <p class="mt-4 text-gray-700">
+                Bridges are used in various industrial applications to measure resistance, inductance, and capacitance. They play a key role in calibrating electrical instruments, testing materials, and ensuring accurate measurements in scientific experiments.
+            </p>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <section class="py-12 text-center">
+        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
+            Back to Home
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-4 text-center">
+        <p>&copy; 2024 SSC JE Prep. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

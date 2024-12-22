@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Theorems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* For the dropdown to show on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Basic Electrical</div>
+            <ul class="flex space-x-6">
+                <!-- Home -->
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+
+                <!-- Topics Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-yellow-300">Topics</a>
+                    <ul class="dropdown-menu absolute hidden bg-blue-600 text-white mt-2 rounded shadow-lg w-48">
+                        <li><a href="basic-electricity.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electricity</a></li>
+                        <li><a href="ohms-law.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Ohm's Law</a></li>
+                        <li><a href="kvl-kcl.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">KVL & KCL Theorems</a></li>
+                        <li><a href="ac-fundamentals.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">AC Fundamentals</a></li>
+                    </ul>
+                </li>
+
+                <!-- About -->
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+
+                <!-- Downloads -->
+                <li><a href="downloads.html" class="hover:text-yellow-300">Downloads</a></li>
+
+                <!-- Contact -->
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Electrical Theorems</h1>
+            <p class="mt-4 text-lg">Learn the key electrical theorems with their explanations and formulas.</p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+
+            <!-- Thevenin Theorem -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Thevenin Theorem</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Thevenin’s Theorem states that any linear electrical network with voltage and current sources and resistances can be simplified to an equivalent circuit with a single voltage source (Vth) in series with a resistance (Rth).
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Vth</strong> = Thevenin equivalent voltage</li>
+                    <li><strong>Rth</strong> = Thevenin equivalent resistance</li>
+                </ul>
+            </div>
+
+            <!-- Norton Theorem -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Norton Theorem</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Norton’s Theorem is a dual of Thevenin’s Theorem. It states that any linear electrical network can be simplified to an equivalent current source (In) in parallel with a resistance (Rn).
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>In</strong> = Norton equivalent current</li>
+                    <li><strong>Rn</strong> = Norton equivalent resistance</li>
+                </ul>
+            </div>
+
+            <!-- Superposition Theorem -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Superposition Theorem</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Superposition Theorem states that in a linear circuit with multiple sources, the current (or voltage) in any component can be found by considering one source at a time and summing the individual effects.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li>For each source: <strong>I = (V/R)</strong></li>
+                    <li>Sum all the individual currents or voltages to find the total effect.</li>
+                </ul>
+            </div>
+
+            <!-- Reciprocity Theorem -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Reciprocity Theorem</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Reciprocity Theorem states that in a linear network, the current that would flow in one branch due to a voltage source in another branch will be the same as the current that would flow in the second branch if the same voltage were applied to the first branch.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Iab = Iba</strong> (current in one branch is equal to the current in the other branch)</li>
+                </ul>
+            </div>
+
+            <!-- Maximum Power Transfer Theorem -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Maximum Power Transfer Theorem</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    The Maximum Power Transfer Theorem states that the maximum power will be delivered to the load when the load resistance (Rl) is equal to the source resistance (Rs) of the circuit.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 font-semibold">Formula:</p>
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5">
+                    <li><strong>Rl = Rs</strong> (Load resistance equals the source resistance for maximum power transfer)</li>
+                    <li>Maximum Power: <strong>Pmax = (V^2) / (4 * Rs)</strong></li>
+                </ul>
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-12 text-center">
+                <a href="javascript:history.back()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    Go Back to Home Page
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

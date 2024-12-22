@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <div class="text-2xl font-bold">SSC JE Prep</div>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="aboutus.html" class="hover:text-yellow-300">About</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-yellow-300">Subjects</a>
+                    <ul class="dropdown-menu absolute hidden group-hover:block bg-blue-600 text-white rounded-lg mt-2 w-48">
+                        <li><a href="basic-electrical.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electrical</a></li>
+                        <li><a href="power-system.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Power System</a></li>
+                        <li><a href="basic-electronics.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Basic Electronics</a></li>
+                        <li><a href="measurement.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Measurement</a></li>
+                        <li><a href="electrical-machine.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Electrical Machine</a></li>
+                    </ul>
+                </li>
+                <li><a href="downloaded.html" class="hover:text-yellow-300">Downloads</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+            <button id="hamburger" class="md:hidden flex flex-col space-y-1">
+                <span class="w-6 h-1 bg-white"></span>
+                <span class="w-6 h-1 bg-white"></span>
+                <span class="w-6 h-1 bg-white"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+   <section class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-gray-800">About Us</h1>
+            <p class="mt-4 text-lg text-gray-700">
+                SSC JE Prep is an online platform designed to help aspiring electrical engineers prepare for the 
+                <strong>SSC JE Exam</strong>. Our goal is to provide exam-focused resources, including detailed notes, 
+                solved papers, and practice quizzes to ensure success.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Our Mission Section -->
+    <section class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Our Mission</h2>
+            <p class="mt-4 text-lg text-gray-700 text-center">
+                Our mission is to simplify SSC JE preparation for electrical engineering aspirants by offering 
+                high-quality, exam-oriented content that is easy to understand and apply.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <!-- Feature Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Exam-Focused Content</h3>
+                    <p class="mt-2 text-gray-700">All materials are tailored to the SSC JE syllabus, ensuring you study what matters most.</p>
+                </div>
+                <!-- Feature Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Expert Guidance</h3>
+                    <p class="mt-2 text-gray-700">Learn from experienced educators and professionals in the electrical engineering field.</p>
+                </div>
+                <!-- Feature Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Downloadable Resources</h3>
+                    <p class="mt-2 text-gray-700">Access free notes, solved papers, and study guides to boost your preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-blue-700 text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold">Join Thousands of Successful SSC JE Aspirants</h2>
+            <p class="mt-4 text-lg">Start your preparation today with our comprehensive study resources and expert guidance.</p>
+            <a href="contact.html" class="mt-6 inline-block px-8 py-3 bg-yellow-300 text-blue-800 font-semibold rounded hover:bg-yellow-400">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

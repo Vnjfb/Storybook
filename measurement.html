@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement - SSC JE Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure the dropdown stays hidden initially */
+        .dropdown-menu {
+            display: none;
+        }
+
+        /* Show dropdown menu when hovering over the parent */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Add hover effects */
+        .dropdown-menu li a {
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Measurement</div>
+            <ul class="flex space-x-6">
+                <!-- Home -->
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+
+                <!-- Topics Dropdown -->
+                <li class="relative dropdown">
+                    <a href="downloaded.html" class="hover:text-yellow-300">Topics</a>
+                    <ul class="dropdown-menu absolute hidden bg-blue-600 text-white mt-2 rounded shadow-lg w-64 z-50">
+                        <li><a href="error-analysis.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Error Analysis</a></li>
+                        <li><a href="electrical-measuring-instruments.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Electrical Measuring Instruments</a></li>
+                        <li><a href="power-energy-measurement.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Power & Energy Measurement</a></li>
+                        <li><a href="ac-dc-bridges.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">AC & DC Bridges</a></li>
+                        <li><a href="transducers.html" class="block px-4 py-2 hover:bg-yellow-300 hover:text-blue-800">Transducers</a></li>
+                    </ul>
+                </li>
+
+                <!-- About -->
+                <li><a href="aboutus.html" class="hover:text-yellow-300">About</a></li>
+
+                <!-- Downloads -->
+                <li><a href="downloaded.html" class="hover:text-yellow-300">Downloads</a></li>
+
+                <!-- Contact -->
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Measurement</h1>
+            <p class="mt-4 text-lg">Key concepts and formulas for SSC JE Exam Preparation</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Measurement Topics for SSC JE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Topic 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Error Analysis</h3>
+                    <p class="mt-2 text-gray-700">
+                        Learn about types of errors, precision, and accuracy involved in measurements.
+                    </p>
+                    <a href="error-analysis.html" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Electrical Measuring Instruments</h3>
+                    <p class="mt-2 text-gray-700">
+                        Understand various electrical instruments like voltmeters, ammeters, and multimeters.
+                    </p>
+                    <a href="electrical-measuring-instruments.html" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Power & Energy Measurement</h3>
+                    <p class="mt-2 text-gray-700">
+                        Explore the principles of power and energy measurement, including wattmeters and energy meters.
+                    </p>
+                    <a href="power-energy-measurement.html" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">AC & DC Bridges</h3>
+                    <p class="mt-2 text-gray-700">
+                        Learn about Wheatstone Bridge, Maxwell Bridge, and other types of AC/DC bridges used for measurement.
+                    </p>
+                    <a href="#ac-dc-bridges.html" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+
+                <!-- Topic 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600">Transducers</h3>
+                    <p class="mt-2 text-gray-700">
+                        Understand the working principles of transducers and their applications in measurements.
+                    </p>
+                    <a href="#transducers.html" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Read More Sections -->
+
+    <section id="error-analysis" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Error Analysis</h2>
+            <p class="mt-4 text-gray-700">
+                In measurements, errors are inevitable. They can be classified into:
+                <ul class="list-disc list-inside mt-4">
+                    <li><strong>Systematic Errors:</strong> Caused by faulty instruments or methods.</li>
+                    <li><strong>Random Errors:</strong> Occur due to uncontrollable factors.</li>
+                    <li><strong>Gross Errors:</strong> Caused by human mistakes.</li>
+                </ul>
+                Understanding and minimizing these errors are crucial for accurate measurements.
+            </p>
+        </div>
+    </section>
+
+    <section id="electrical-measuring-instruments" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800">Electrical Measuring Instruments</h2>
+            <p class="mt-4 text-gray-700">
+                Electrical measuring instruments include:
+                <ul class="list-disc list-inside mt-4">
+                    <li><strong>Voltmeter:</strong> Measures the voltage between two points.</li>
+                    <li><strong>Ammeter:</strong> Measures the current flowing through a circuit.</li>
+                    <li><strong>Multimeter:</strong> A versatile tool that can measure voltage, current, and resistance.</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-4 text-center">
+        <p>&copy; 2024 SSC JE Prep. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

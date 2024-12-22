@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm's Law Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Basic Electrical</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+                <li><a href="ohms-law-quiz.html" class="hover:text-yellow-300">Ohm's Law Quiz</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Ohm's Law Quiz</h1>
+            <p class="mt-2">Test your knowledge of Ohm's Law before the timer runs out!</p>
+        </div>
+    </header>
+
+    <!-- Timer -->
+    <div class="bg-blue-100 py-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-lg font-semibold text-gray-800">Time Remaining: <span id="timer" class="text-red-600">05:00</span></h2>
+        </div>
+    </div>
+
+    <!-- Quiz Content -->
+    <section class="py-12">
+        <div class="container mx-auto max-w-3xl">
+            <div id="quizContainer">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="mt-8 flex justify-between">
+                <button id="prevBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 hidden">Previous</button>
+                <button id="nextBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Next</button>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-8 text-center">
+                <button id="submitBtn" class="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 hidden">Submit Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Card -->
+    <section id="resultCard" class="hidden py-12 bg-gray-100">
+        <div class="container mx-auto max-w-3xl text-center bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800">Quiz Results</h2>
+            <p id="resultDetails" class="mt-4 text-lg text-gray-700"></p>
+            <button onclick="location.reload();" class="mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Try Again</button>
+        </div>
+    </section>
+    <!-- Back Button -->
+    <div class="mb-8 text-center">
+     <a href="javascript:history.back()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+      Go Back to Previous Page
+     </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+     <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+    <script>
+        // Ohm's Law Questions and Answers
+        const quizQuestions = [
+            { question: "What is Ohm's Law?", options: ["V = I × R", "V = I / R", "I = R / V"], correct: 0 },
+            { question: "If the resistance is 10 ohms and current is 2 A, what is the voltage?", options: ["5 V", "20 V", "10 V"], correct: 1 },
+            { question: "What is the unit of resistance?", options: ["Ampere", "Volt", "Ohm"], correct: 2 },
+            { question: "If voltage is 24 V and current is 3 A, what is the resistance?", options: ["8 ohms", "12 ohms", "6 ohms"], correct: 0 },
+            { question: "What does R stand for in Ohm's Law?", options: ["Resistance", "Reactance", "Resonance"], correct: 0 },
+            { question: "Which of the following equations is correct for Ohm's Law?", options: ["I = V / R", "I = R × V", "R = V × I"], correct: 0 },
+            { question: "If resistance is 50 ohms and voltage is 100 V, what is the current?", options: ["1 A", "2 A", "0.5 A"], correct: 1 },
+            { question: "What is the resistance if the current is 5 A and the voltage is 50 V?", options: ["10 ohms", "25 ohms", "5 ohms"], correct: 0 },
+            { question: "What happens to the current if resistance increases while voltage stays the same?", options: ["Increases", "Decreases", "Remains the same"], correct: 1 },
+            { question: "What is the formula to calculate power in terms of Ohm's Law?", options: ["P = V × I", "P = V² / R", "Both A and B"], correct: 2 },
+        ];
+
+        // Variables
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+        let timer = 300; // 5 minutes in seconds
+        const quizContainer = document.getElementById("quizContainer");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const submitBtn = document.getElementById("submitBtn");
+        const resultCard = document.getElementById("resultCard");
+        const resultDetails = document.getElementById("resultDetails");
+
+        // Functions
+        function loadQuestion(index) {
+            const questionData = quizQuestions[index];
+            quizContainer.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800">${index + 1}. ${questionData.question}</h3>
+                <div class="mt-4 space-y-2">
+                    ${questionData.options.map((option, i) => `
+                        <label class="block">
+                            <input type="radio" name="answer" value="${i}" ${userAnswers[index] === i ? 'checked' : ''}>
+                            ${option}
+                        </label>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showResult() {
+            let score = 0;
+            const totalQuestions = quizQuestions.length;
+            userAnswers.forEach((answer, i) => {
+                if (answer === quizQuestions[i].correct) score++;
+            });
+
+            const percentage = ((score / totalQuestions) * 100).toFixed(2);
+            resultDetails.innerHTML = `
+                <h3 class="text-xl font-bold text-gray-800">Quiz Summary:</h3>
+                <p class="mt-4 text-lg">Total Questions: <strong>${totalQuestions}</strong></p>
+                <p class="text-lg">Correct Answers: <strong>${score}</strong></p>
+                <p class="text-lg">Your Score: <strong>${percentage}%</strong></p>
+                ${percentage === "100.00" 
+                    ? `<p class="mt-4 text-green-600 font-semibold">Excellent! You got everything correct! 🎉</p>` 
+                    : percentage >= 50 
+                        ? `<p class="mt-4 text-blue-600 font-semibold">Good job! Keep improving! 👍</p>` 
+                        : `<p class="mt-4 text-red-600 font-semibold">Don't worry! Practice more to get better. 😊</p>`}
+            `;
+
+            resultCard.classList.remove("hidden");
+        }
+
+        function updateButtons() {
+            prevBtn.classList.toggle("hidden", currentQuestionIndex === 0);
+            nextBtn.classList.toggle("hidden", currentQuestionIndex === quizQuestions.length - 1);
+            submitBtn.classList.toggle("hidden", currentQuestionIndex !== quizQuestions.length - 1);
+        }
+
+        prevBtn.addEventListener("click", () => {
+            saveAnswer();
+            currentQuestionIndex--;
+            loadQuestion(currentQuestionIndex);
+            updateButtons();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            saveAnswer();
+            currentQuestionIndex++;
+            loadQuestion(currentQuestionIndex);
+            updateButtons();
+        });
+
+        submitBtn.addEventListener("click", () => {
+            saveAnswer();
+            showResult();
+        });
+
+        function saveAnswer() {
+            const selectedOption = document.querySelector("input[name='answer']:checked");
+            if (selectedOption) {
+                userAnswers[currentQuestionIndex] = parseInt(selectedOption.value);
+            }
+        }
+
+        // Timer Logic
+        setInterval(() => {
+            if (timer > 0) {
+                timer--;
+                const minutes = Math.floor(timer / 60).toString().padStart(2, "0");
+                const seconds = (timer % 60).toString().padStart(2, "0");
+                document.getElementById("timer").textContent = `${minutes}:${seconds}`;
+            } else {
+                alert("Time's up! Submitting your quiz.");
+                showResult();
+            }
+        }, 1000);
+
+        // Initialize
+        loadQuestion(currentQuestionIndex);
+        updateButtons();
+    </script>
+</body>
+</html>

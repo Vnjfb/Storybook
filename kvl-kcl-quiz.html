@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVL & KCL Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Menu Bar -->
+    <nav class="bg-blue-700 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">KVL & KCL Quiz</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">KVL & KCL Quiz</h1>
+            <p class="mt-2">Answer the questions and test your knowledge of Kirchhoff's Laws.</p>
+        </div>
+    </header>
+
+    <!-- Timer -->
+    <div class="bg-blue-100 py-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-lg font-semibold text-gray-800">Time Remaining: <span id="timer" class="text-red-600">05:00</span></h2>
+        </div>
+    </div>
+
+    <!-- Quiz Content -->
+    <section class="py-12">
+        <div class="container mx-auto max-w-3xl">
+            <div id="quizContainer"></div>
+
+            <!-- Navigation Buttons -->
+            <div class="mt-8 flex justify-between">
+                <button id="prevBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 hidden">Previous</button>
+                <button id="nextBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Next</button>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-8 text-center">
+                <button id="submitBtn" class="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 hidden">Submit Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Card -->
+    <section id="resultCard" class="hidden py-12 bg-gray-100">
+        <div class="container mx-auto max-w-3xl text-center bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800">Quiz Results</h2>
+            <p id="resultDetails" class="mt-4 text-lg text-gray-700"></p>
+            <button onclick="location.reload();" class="mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Try Again</button>
+        </div>
+    </section>
+    <!-- Back Button -->
+    <div class="mb-8 text-center">
+        <a href="javascript:history.back()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+            Go Back to Previous Page
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+        <p>&copy; 2024 SSC JE Prep. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // KVL & KCL Quiz Questions and Answers
+        const quizQuestions = [
+            { question: "What does KVL stand for?", options: ["Kirchhoff's Voltage Law", "Kirchhoff's Variable Law", "Kepler's Voltage Law"], correct: 0 },
+            { question: "What does KCL stand for?", options: ["Kirchhoff's Current Law", "Kirchhoff's Charge Law", "Kelvin's Current Law"], correct: 0 },
+            { question: "KVL states that the sum of voltages in a closed loop is:", options: ["Zero", "Infinite", "Equal to the supply voltage"], correct: 0 },
+            { question: "KCL states that the sum of currents at a node is:", options: ["Zero", "Equal to incoming current", "Infinite"], correct: 0 },
+            { question: "In a series circuit, the total voltage is the:", options: ["Sum of individual voltages", "Average voltage", "Product of voltages"], correct: 0 },
+            { question: "In a parallel circuit, the total current is the:", options: ["Sum of branch currents", "Difference of branch currents", "Product of branch currents"], correct: 0 },
+            { question: "KVL is based on the principle of:", options: ["Conservation of Energy", "Conservation of Charge", "Conservation of Mass"], correct: 0 },
+            { question: "KCL is based on the principle of:", options: ["Conservation of Charge", "Conservation of Energy", "Conservation of Mass"], correct: 0 },
+            { question: "In a closed circuit, the algebraic sum of all potential differences equals:", options: ["Zero", "Total voltage", "Total current"], correct: 0 },
+            { question: "At any node in a circuit, the sum of currents entering and leaving is:", options: ["Zero", "Infinite", "Equal to the voltage"], correct: 0 },
+        ];
+
+        // Variables and Timer
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+        let timer = 300;
+        const quizContainer = document.getElementById("quizContainer");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const submitBtn = document.getElementById("submitBtn");
+        const resultCard = document.getElementById("resultCard");
+        const resultDetails = document.getElementById("resultDetails");
+
+        // Functions
+        function loadQuestion(index) {
+            const questionData = quizQuestions[index];
+            quizContainer.innerHTML = `
+                <h3 class="text-2xl font-bold text-gray-800">${index + 1}. ${questionData.question}</h3>
+                <div class="mt-4 space-y-2">
+                    ${questionData.options.map((option, i) => `
+                        <label class="block">
+                            <input type="radio" name="answer" value="${i}" ${userAnswers[index] === i ? 'checked' : ''}>
+                            ${option}
+                        </label>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showResult() {
+            let score = 0;
+            const totalQuestions = quizQuestions.length;
+            userAnswers.forEach((answer, i) => {
+                if (answer === quizQuestions[i].correct) score++;
+            });
+            const percentage = ((score / totalQuestions) * 100).toFixed(2);
+            resultDetails.innerHTML = `
+                <h3 class="text-xl font-bold text-gray-800">Quiz Summary:</h3>
+                <p class="mt-4 text-lg">Total Questions: <strong>${totalQuestions}</strong></p>
+                <p class="text-lg">Correct Answers: <strong>${score}</strong></p>
+                <p class="text-lg">Your Score: <strong>${percentage}%</strong></p>
+                ${percentage === "100.00" 
+                    ? `<p class="mt-4 text-green-600 font-semibold">Excellent! You got everything correct! 🎉</p>` 
+                    : percentage >= 50 
+                        ? `<p class="mt-4 text-blue-600 font-semibold">Good job! Keep improving! 👍</p>` 
+                        : `<p class="mt-4 text-red-600 font-semibold">Don't worry! Practice more to get better. 😊</p>`}
+            `;
+            resultCard.classList.remove("hidden");
+        }
+
+        function updateButtons() {
+            prevBtn.classList.toggle("hidden", currentQuestionIndex === 0);
+            nextBtn.classList.toggle("hidden", currentQuestionIndex === quizQuestions.length - 1);
+            submitBtn.classList.toggle("hidden", currentQuestionIndex !== quizQuestions.length - 1);
+        }
+
+        prevBtn.addEventListener("click", () => {
+            saveAnswer();
+            currentQuestionIndex--;
+            loadQuestion(currentQuestionIndex);
+            updateButtons();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            saveAnswer();
+            currentQuestionIndex++;
+            loadQuestion(currentQuestionIndex);
+            updateButtons();
+        });
+
+        submitBtn.addEventListener("click", () => {
+            saveAnswer();
+            showResult();
+            document.querySelector("section").classList.add("hidden");
+        });
+
+        function saveAnswer() {
+            const selectedOption = document.querySelector("input[name='answer']:checked");
+            if (selectedOption) {
+                userAnswers[currentQuestionIndex] = parseInt(selectedOption.value);
+            }
+        }
+
+        setInterval(() => {
+            if (timer > 0) {
+                timer--;
+                const minutes = Math.floor(timer / 60).toString().padStart(2, "0");
+                const seconds = (timer % 60).toString().padStart(2, "0");
+                document.getElementById("timer").textContent = `${minutes}:${seconds}`;
+            } else {
+                alert("Time's up! Submitting your quiz.");
+                showResult();
+            }
+        }, 1000);
+
+        loadQuestion(currentQuestionIndex);
+        updateButtons();
+    </script>
+</body>
+</html>
